@@ -93,7 +93,7 @@ tk.Label(root, text="years", bg="#222", foreground="white").grid(row = 2, column
 num1 = tk.StringVar()
 num3 = tk.StringVar()
 tk.Entry(root, textvariable=num1).grid(row = 1, column = 0, pady = 10, sticky = 'W')
-tk.Entry(root, textvariable=num3).grid(row = 2, column = 0, pady = 10, sticky = 'E')
+tk.Entry(root, textvariable=num3,state='disabled').grid(row = 2, column = 0, pady = 10, sticky = 'E')
 
 #button
 button = tk.Button(root, text="Calculate", command=generate,activebackground='green',activeforeground='white',bg='yellow')
