@@ -20,24 +20,34 @@ t1=-1
 
 def generate():
     try:
+        global p
         p=float(num1.get())
-        k= np.log(2)/5730
-        r=p/100
-        t=-(np.log(r)/k)
-        result=np.round(t)
-
-        global p1, k1, r1, t1
-
-        p1 = p
-        k1 = k
-        r1 = r
-        t1 = t
+        if ((p>= 0) and (p<= 100)):
+          k= np.log(2)/5730
+          r=p/100
+          t=-(np.log(r)/k)
+          result=np.round(t)
+          global p1, k1, r1, t1
+          p1 = p
+          k1 = k
+          r1 = r
+          t1 = t
+        else:
+          print("Sorry, input should be between 0 - 100")
+          result = 'Error,Try Again!!'
+          num3.set(result)
+          return()
+        
+        #if ((p1>= 0) and (p<= 100)):
+#        p1 = p
+#        k1 = k
+#        r1 = r
+#        t1 = t
         print("Within generate ", p1, k1, r1, t1)
 
     except Exception as ex:
         print(ex)
         result = 'error'
-
     num3.set(result)
 
 # graph
